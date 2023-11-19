@@ -1,16 +1,15 @@
 import "./App.css";
+import Text from "./components/Text";
 
-import Product from "./components/Product";
-
-function App() {
+const App = () => {
   return (
     <div>
-      <Product />;
-      <Product />;
-      <Product />;
-      <Product />;
+      <Text>
+        <h3>Heading3</h3>
+        <h2>Heading2</h2>
+      </Text>
     </div>
   );
-}
+};
 
 export default App;

@@ -1,12 +1,11 @@
-lesson3 : react
+lesson4 : JSX va props
 
-1. Vite
+1.JSX là gì ?
 
-- npm create vite or yarn create vite
-- chon react -> javascript + SWC
-- npm install or yarn install
-- npm run dev or yarn dev
+- cú pháp mở rộng của js
+- như HTML nhưng kp HTML
+- có thể thay thế bởi hàm createElement (ko khuyến khích)
+- có thể viết logic
+- 1 component không thể return ra 2 jsx được
 
-2.  cach khac : create-react-app,
-
-3 . khỏi tao component :-> 4. Component fai viet hoa 5. Class -> Classname
+2. Props là gì ? : kỹ thuật truyền data từ cha xuống con
