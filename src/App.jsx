@@ -1,13 +1,14 @@
-import "./App.css";
-import Button from "./components/Button";
-import Text from "./components/Text";
+import React from "react";
 
 const App = () => {
   return (
     <div>
-      <Button type={"primary"} color={"red"} />
-      <Button type={"secondary"} color={"blue"} />
-      <Button type={"white"} />
+      <div style={{ background: "red", width: "200px", height: "200px" }}></div>
+      <button>red</button>
+      <button>yellow</button>
+      <button>green</button>
+      <button>violet</button>
+      <button>black</button>
     </div>
   );
 };
