@@ -1,7 +1,12 @@
-LESSON6 : More state and props
+LESSON7 : List vs conditional rendering
 
-1. Handle form vs react
+1 List trong react ?
 
-1.1 xu ly input => state => handle input
+- map -> render list -> cần dùng key props
 
-2,Lifting state up -> nhấc state lên
+- key là gì ?
+
+* key 1 prop mặc định trong react
+* key -> đánh dấu -> react tối ưu về performance
+
+2 conditional rendering -> điều kiện để render ra màn hình

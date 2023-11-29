@@ -1,64 +1,37 @@
-import React from "react";
-import { useState } from "react";
-import Input from "./components/Input";
-
-//format code => clean
-
-const defaultUser = {
-  firstName: "",
-  lastName: "",
-  address: "",
-};
+import React, { useState } from "react";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer, toast } from "react-toastify";
+import "./App.css";
+import Form from "./components/Form";
+import ListTodo from "./components/ListTodo";
 
 const App = () => {
-  //0x1234
-  const [user, setUser] = useState(defaultUser);
+  const [todos, setTodos] = useState([]);
 
-  const onSubmit = (e) => {
-    e.preventDefault();
-    //logic
-    alert("LOGIN");
+  const handleAddTodo = (val) => {
+    if (!val) {
+      toast.error("Please fill out input");
+      return;
+    }
 
-    console.log(user);
+    const newTodo = {
+      id: new Date().getTime(),
+      name: val,
+      isDone: false,
+    };
 
-    setUser(defaultUser);
+    setTodos([...todos, newTodo]);
+
+    toast.success("Adding todo is success");
   };
-  const onChangeInput = (event, key) => {
-    const value = event.target.value;
-
-    //0x987
-    const newPerson = { ...user, [key]: value };
-    setUser(newPerson);
-  };
-
-  const { firstName, lastName, address } = user;
 
   return (
-    <form onSubmit={onSubmit}>
-      <h1>LOGIN FORM</h1>
-      <Input
-        label={"FirstName"}
-        id={"firstName"}
-        value={firstName}
-        onChangeInput={onChangeInput}
-        inputKey="firstName"
-      />
-      <Input
-        label={"LastName"}
-        id={"lastName"}
-        value={lastName}
-        onChangeInput={onChangeInput}
-        inputKey="lastName"
-      />
-      <Input
-        label={"Address"}
-        id={"address"}
-        value={address}
-        onChangeInput={onChangeInput}
-        inputKey="address"
-      />
-      <button>SUBMIT</button>
-    </form>
+    <div>
+      <h1>TODOLIST</h1>
+      <Form handleAddTodo={handleAddTodo} />
+      <ListTodo todos={todos} />
+      <ToastContainer />
+    </div>
   );
 };
 
