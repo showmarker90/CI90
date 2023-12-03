@@ -1,36 +1,27 @@
 import React, { useState } from "react";
-import "react-toastify/dist/ReactToastify.css";
-import { ToastContainer, toast } from "react-toastify";
-import "./App.css";
-import Form from "./components/Form";
-import ListTodo from "./components/ListTodo";
+import Counter from "./components/Counter";
+import { Button } from "antd";
+import axios from "axios";
+
+const URL = "https://fakestoreapi.com/products";
+
+// bất đồng bộ và đồng bộ -> event loop
+
+// promises
+// callback
+// async await
 
 const App = () => {
-  const [todos, setTodos] = useState([]);
+  const callAPI = async () => {
+    const response = await axios.get(URL); //10 minutes
 
-  const handleAddTodo = (val) => {
-    if (!val) {
-      toast.error("Please fill out input");
-      return;
-    }
-
-    const newTodo = {
-      id: new Date().getTime(),
-      name: val,
-      isDone: false,
-    };
-
-    setTodos([...todos, newTodo]);
-
-    toast.success("Adding todo is success");
+    console.log(response.data);
   };
-
   return (
     <div>
-      <h1>TODOLIST</h1>
-      <Form handleAddTodo={handleAddTodo} />
-      <ListTodo todos={todos} />
-      <ToastContainer />
+      <Button type="primary" onClick={callAPI}>
+        Get products
+      </Button>
     </div>
   );
 };

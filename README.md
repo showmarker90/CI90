@@ -1,12 +1,28 @@
-LESSON7 : List vs conditional rendering
+LESSON8 : Side-effect vs useEffect
 
-1 List trong react ?
+1. Side-effect : -> tác vụ mà component k xử lí được
 
-- map -> render list -> cần dùng key props
+- HTTP request/response
+- Xử lí timer
+- Xử lí những sự kiện
 
-- key là gì ?
+2. UseEffect -> xử lí side effect
 
-* key 1 prop mặc định trong react
-* key -> đánh dấu -> react tối ưu về performance
+useEffect(a,b)
 
-2 conditional rendering -> điều kiện để render ra màn hình
+- a -> callback fn
+- b (optional) -> array dependencies -> mangr phụ thuộc
+
+hook useEffect chạy khi nào ?
+
+1. 1 component render lần đầu tiên
+2. chạy lại khi 1 giá trị trong array dependencies thay đổi
+
+3. Life cycle -> vòng đời của 1 component
+
+- Lưu ý : Functional component k có life-cycle, chỉ có class-component mới có ?
+
+class -> tạo ra 1 component -> class component
+function -> tạo ra 1 component -> functional component
+
+mounting -> updating -> unmounting
