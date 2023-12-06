@@ -1,28 +1,15 @@
-LESSON8 : Side-effect vs useEffect
+LESSON9 : CONTEXT
 
-1. Side-effect : -> tác vụ mà component k xử lí được
+1. Context là gì ? -> Global state
 
-- HTTP request/response
-- Xử lí timer
-- Xử lí những sự kiện
+2. Tại sao cần dùng context ?
 
-2. UseEffect -> xử lí side effect
+-> tránh trường hợp truyền qua nhiều component liên tục
 
-useEffect(a,b)
+3 . Các bc set up context
 
-- a -> callback fn
-- b (optional) -> array dependencies -> mangr phụ thuộc
+createContext -> tạo context
+useContext -> sử dụng context
 
-hook useEffect chạy khi nào ?
-
-1. 1 component render lần đầu tiên
-2. chạy lại khi 1 giá trị trong array dependencies thay đổi
-
-3. Life cycle -> vòng đời của 1 component
-
-- Lưu ý : Functional component k có life-cycle, chỉ có class-component mới có ?
-
-class -> tạo ra 1 component -> class component
-function -> tạo ra 1 component -> functional component
-
-mounting -> updating -> unmounting
+b1 : tạo context để sử dụng (global state)
+b2 : su dun g context

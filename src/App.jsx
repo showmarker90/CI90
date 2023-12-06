@@ -1,29 +1,43 @@
-import React, { useState } from "react";
-import Counter from "./components/Counter";
-import { Button } from "antd";
-import axios from "axios";
+// import React, { createContext, useState } from "react";
+// import Grand from "./components/Grand";
+// import { Input } from "antd";
 
-const URL = "https://fakestoreapi.com/products";
+// const user = {
+//   firstName: "Elon",
+//   lastName: "Musk",
+// };
 
-// bất đồng bộ và đồng bộ -> event loop
+// export const AppContext = createContext(null);
 
-// promises
-// callback
-// async await
+// const App = () => {
+//   const [val, setVal] = useState("");
+//   return (
+//     <>
+//       <Input
+//         type="primary"
+//         placeholder="Enter search"
+//         value={val}
+//         onChange={(e) => setVal(e.target.value)}
+//       />
+//       <AppContext.Provider
+//         value={{
+//           user,
+//           val,
+//         }}
+//       >
+//         App
+//         <Grand />
+//       </AppContext.Provider>
+//     </>
+//   );
+// };
+
+// export default App;
+
+import React from "react";
 
 const App = () => {
-  const callAPI = async () => {
-    const response = await axios.get(URL); //10 minutes
-
-    console.log(response.data);
-  };
-  return (
-    <div>
-      <Button type="primary" onClick={callAPI}>
-        Get products
-      </Button>
-    </div>
-  );
+  return <div>App</div>;
 };
 
 export default App;
