@@ -1,15 +1,14 @@
-LESSON9 : CONTEXT
+LESSON10 : Routing
 
-1. Context là gì ? -> Global state
+1. Routing là gì ?
 
-2. Tại sao cần dùng context ?
+- page -> 2s -> load toàn bộ content trang -> user chờ 2s
 
--> tránh trường hợp truyền qua nhiều component liên tục
+- react
 
-3 . Các bc set up context
+B1 : install lib react-router-dom
+B2 : set up react-router-dom
 
-createContext -> tạo context
-useContext -> sử dụng context
-
-b1 : tạo context để sử dụng (global state)
-b2 : su dun g context
+/ -> <Home />
+/about -> <About />
+/products -> <Products />
