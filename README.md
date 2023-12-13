@@ -1,14 +1,5 @@
-LESSON10 : Routing
+https://fakestoreapi.com/products => all product
+https://fakestoreapi.com/products/:productID => chi tiết sản phẩm có id là productID
 
-1. Routing là gì ?
-
-- page -> 2s -> load toàn bộ content trang -> user chờ 2s
-
-- react
-
-B1 : install lib react-router-dom
-B2 : set up react-router-dom
-
-/ -> <Home />
-/about -> <About />
-/products -> <Products />
+listProducts -> https://fakestoreapi.com/products
+detailProduct -> https://fakestoreapi.com/products/:productID

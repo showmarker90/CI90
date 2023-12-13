@@ -30,3 +30,25 @@ a{
   color: red !important;
   font-weight: bold !important;
 }
+
+.image-product{
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.image-product img{
+  max-width: 100%;
+}
+
+.loading{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
